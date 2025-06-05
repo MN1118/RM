@@ -1,0 +1,18 @@
+#include <reg51.h>
+
+void main() {
+    unsigned char i;
+    unsigned char source[5] = {0x11, 0x22, 0x33, 0x44, 0x55};
+    unsigned char copy[5];
+    unsigned char reverse[5];
+
+    for(i = 0; i < 5; i++) {
+        copy[i] = source[i];
+    }
+
+    for(i = 0; i < 5; i++) {
+        reverse[i] = copy[4 - i];
+    }
+
+    while(1);
+}
